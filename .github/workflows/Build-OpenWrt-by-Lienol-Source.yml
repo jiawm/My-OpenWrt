@@ -23,9 +23,9 @@ env:
   REPO_URL: https://github.com/Lienol/openwrt
   REPO_BRANCH: 22.03
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: MenuConfig/x86-L.config
-  DIY_P1_SH: Scripts/diy-part1-x86-L.sh
-  DIY_P2_SH: Scripts/diy-part2-L.sh
+  CONFIG_FILE: MenuConfig/x86-lienol.config.config
+  DIY_P1_SH: Scripts/diy-part1-x86-lienol.sh
+  DIY_P2_SH: Scripts/diy-part2-x86-lienol.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
