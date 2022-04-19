@@ -23,9 +23,9 @@ env:
   REPO_URL: https://github.com/immortalwrt/immortalwrt
   REPO_BRANCH: openwrt-21.02
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: MenuConfig/x86.config
-  DIY_P1_SH: Scripts/diy-part1-x86-M.sh
-  DIY_P2_SH: Scripts/diy-part2-.sh
+  CONFIG_FILE: MenuConfig/x86-mortal.config
+  DIY_P1_SH: Scripts/diy-part1-x86-mortal.sh
+  DIY_P2_SH: Scripts/diy-part2-x86-mortal.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
