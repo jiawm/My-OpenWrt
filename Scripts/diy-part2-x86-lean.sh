@@ -11,10 +11,10 @@
 
 
 # 切换ramips内核为 5.10
-# sed -i 's/5.4/5.10/g' ./target/linux/ramips/Makefile
+sed -i 's/5.15/5.10/g' ./target/linux/ramips/Makefile
 
 # 切换x86内核为 5.10
-# sed -i 's/5.4/5.10/g' ./target/linux/x86/Makefile
+sed -i 's/5.15/5.10/g' ./target/linux/x86/Makefile
 
 #添加温度显示
 sed -i 's/invalid/# invalid/g' package/network/services/samba36/files/smb.conf.template
@@ -38,10 +38,6 @@ wget -O ./package/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg https://
 svn co https://github.com/xylz0928/luci-mod/trunk/feeds/luci/modules/luci-base/htdocs/luci-static/resources/icons ./package/lucimod
 mv package/lucimod/* feeds/luci/modules/luci-base/htdocs/luci-static/resources/icons/
 
-
-#更换默认主题为argon，并删除bootstrap主题 
-#sed -i 's#luci-theme-bootstrap#luci-theme-argon#g' feeds/luci/collections/luci/Makefile
-#sed -i 's/bootstrap/argon/g' feeds/luci/modules/luci-base/root/etc/config/luci
 
 # Change default theme
 sed -i 's/bootstrap/argon/g' feeds/luci/collections/luci/Makefile
