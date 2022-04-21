@@ -10,11 +10,6 @@
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 
 
-# 切换ramips内核为 5.10
-# sed -i 's/5.4/5.10/g' ./target/linux/ramips/Makefile
-
-# 切换x86内核为 5.10
-# sed -i 's/5.4/5.10/g' ./target/linux/x86/Makefile
 
 #添加温度显示
 sed -i 's/invalid/# invalid/g' package/network/services/samba36/files/smb.conf.template
@@ -75,3 +70,14 @@ chmod -R 755 ./package/luci-app-wolplus/*
 #  git lua-maxminddb 依赖
 # git clone https://github.com/jerrykuku/lua-maxminddb.git package/lean/lua-maxminddb
 
+# 整理固件包时候,删除您不想要的固件或者文件,让它不需要上传到Actions空间（根据编译机型变化,自行调整删除的固件名称）
+cat >${GITHUB_WORKSPACE}/Clear <<-EOF
+rm -rf packages
+rm -rf config.buildinfo
+rm -rf feeds.buildinfo
+rm -rf openwrt-x86-64-generic-kernel.bin
+rm -rf openwrt-x86-64-generic.manifest
+rm -rf openwrt-x86-64-generic-squashfs-rootfs.img.gz
+rm -rf sha256sums
+rm -rf version.buildinfo
+EOF
