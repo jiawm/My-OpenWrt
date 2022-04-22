@@ -8,12 +8,12 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: 启动Mortal-Source编译
+#name: 启动Mortal-Source编译
 
-on:
-  repository_dispatch:
-  workflow_dispatch:
-    inputs:
+#on:
+#  repository_dispatch:
+#  workflow_dispatch:
+#    inputs:
       ssh:
         description: 'SSH connection to Actions'
         required: false
